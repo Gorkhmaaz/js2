@@ -1,3 +1,4 @@
+/////////Task 1
 let age = prompt("Enter your age :");
 
 if (age >= 0 && age <= 2) {
@@ -14,22 +15,8 @@ if (age >= 0 && age <= 2) {
 
 
 
-let num = prompt('Enter the number from 100 to 999');
-    num = num + '';
-    if (num[0] == num[1] || num[0] == num[2] || num[1] == num[2])
-    {
-        alert('TRUE');
-    }
-    else
-        alert('FALSE');
 
-
-
-
-
-        
-
-
+/////Task 2
 let numbers = prompt('Enter a number from 0 to 9 :');
 
 if (numbers == 0) {
@@ -59,9 +46,41 @@ if (numbers == 0) {
 
 
 
+
+//////Task 3 
+
+const userNum = prompt('Enter a three-digit number')
+const num = parseInt(userNum);
+if (isNaN(num) && userNum.length === 3) {
+    const digit1 = Math.floor(num / 100);
+    const digit2 = Math.floor((num % 100) / 10);
+    const digit3 = num % 10;
+
+    if (digit1 === digit2 || digit1 === digit3 || digit2 === digit3) {
+        alert('There are identical numbers ')
+    } else {
+        alert("There aren't identical numbers ")
+    }
+} else {
+    alert('Enter a three digit number')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////Task 4
 let year = prompt('Enter a year');
 
-if(((year % 400 == 0) && (year % 4 == 0)) || (year % 100 != 0)){
+if (((year % 400 == 0) && (year % 4 == 0)) || (year % 100 != 0)) {
     alert('Yes!');
 } else {
     alert('No!');
