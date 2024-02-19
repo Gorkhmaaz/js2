@@ -71,20 +71,113 @@ if (isNaN(num) && userNum.length === 3) {
 
 
 
-
-
-
-
-
-
 //////Task 4
 let year = prompt('Enter a year');
 
-if (((year % 400 == 0) && (year % 4 == 0)) || (year % 100 != 0)) {
-    alert('Yes!');
+if (((year % 400 == 0) && (year % 4 == 0)) && (year % 100 != 0)) {
+    alert('Right!');
 } else {
-    alert('No!');
+    alert('Wrong!');
 }
+
+
+//////Task 5
+let request = prompt('Введите пятиразрядное число')
+if(request.length > 5){
+    alert('Вы ввели не пятиразрядное число!')
+} else if(request.charAt(0) === request.charAt(4) && request.charAt(1) === request.charAt(3)){
+    alert('Число является палиндромом!')
+} else {
+    alert('Число не является пилиндромом')
+}
+
+
+
+
+
+////Task 6
+const quantity = prompt('Enter a dollar')
+const valute = prompt('Choose a valute ')
+let eur = quantity * 0.93
+let uan = quantity * 7.16
+let azn = quantity * 1.7
+if (valute === 'eur'){
+    alert(eur)
+} else if(valute === 'uan'){
+    alert(uan)
+} else if (valute === 'azn'){
+    alert(azn)
+} else {
+    alert('Currently this value is not available')
+}
+
+
+
+////Task 7
+const sum = Number(prompt('Enter the purchase amount:'))
+let discount = 0.03;
+let totalAmount = sum * (1 - discount)
+
+if(sum >= 200 && sum <= 300){
+    discount = 0.03
+    alert("Cумма к оплате со скидкой: " + totalAmount + " руб.");
+} else if(sum >= 300 &&  sum <= 500) {
+    discount = 0.05
+    alert("Cумма к оплате со скидкой: " + totalAmount + " руб.");
+} else if(sum >= 500){
+    discount = 0.07
+    alert("Cумма к оплате со скидкой: " + totalAmount + " руб.");
+} else {
+    alert('You dont have a discount')
+}
+
+
+//////Task 8
+let circleLength = parseInt(prompt('Enter length of circle'))
+let squarePerimetr = parseInt(prompt('Enter perimetr of square'))
+
+let radius = circleLength / (2 * Math.PI);
+let side = squarePerimetr / 4
+
+if(2 * radius <= side ){
+    alert('Окружность помещается в квадрат')
+} else {
+    alert('Окружность не помещается в квадрат')
+}
+
+
+/////Task 9
+
+let totalScore = 0;
+
+// Первый вопрос
+let userAnswer1 = prompt("Сколько футболистов играет на поле с команды ? \n a) 11 \n b) 12 \n c) 13").toLowerCase();
+
+if (userAnswer1 === "a") {
+  totalScore += 2;
+}
+
+// Второй вопрос
+let userAnswer2 = prompt("Какой самый крупный океан? \n a) Тихий \n b) Атлантический \n c) Индийский").toLowerCase();
+
+if (userAnswer2 === "a") {
+  totalScore += 2;
+}
+
+// Третий вопрос
+let userAnswer3 = prompt("Сколько хоккеистов играет на льду с команды? \n a) 5 \n b) 4 \n c) 6").toLowerCase();
+
+if (userAnswer3 === "c") {
+  totalScore += 2;
+}
+
+alert("Общее количество набранных баллов: " + totalScore);
+
+
+
+
+/////Task 10
+
 
 
 
